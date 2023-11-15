@@ -1,0 +1,11 @@
+<div>
+  <h1><strong> <%=@restaurant.name%> </strong> [edit]  </h1>
+
+
+  <%= render "form", restaurant: @restaurant %>
+
+  <div>
+    <%= link_to "Back to restaurants", restaurants_path %>
+  </div>
+
+</div>
