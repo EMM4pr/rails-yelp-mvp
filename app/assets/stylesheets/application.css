@@ -17,12 +17,29 @@
   background-color: #F4EAE0;
 }
 
-
+h1 {
+  margin:15px;
+}
+.restaurant{
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+}
 
 .link{
+  text-decoration: none;
+  color: black;
+}
+
+.button {
   text-decoration: none;
   color: black;
   border: 1px solid;
   border-radius: 10px;
   padding: 5px;
+}
+
+.button:hover {
+  box-shadow: 3px 3px 3px #f0dcc8;
 }
