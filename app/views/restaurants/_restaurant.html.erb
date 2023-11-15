@@ -1,14 +1,13 @@
-<div id="<%= dom_id restaurant %>" class="">
-  <p>
+<div id="<%= dom_id restaurant %>">
+    <img class="center picture" width="200" height="200"
+    src="https://4.bp.blogspot.com/-VUNxWW21MJs/T3dV7J8Hu6I/AAAAAAAAAV4/3ME-0NBBHTg/s1600/kimchi_princess_01.jpg"
+    alt="Kimchi Princess">
+  <p class="center" >
     <strong>Name:</strong>
-    <%= link_to restaurant.name, restaurant, class:"link" %>
+    <%= link_to restaurant.name, restaurant, class:"link " %>
   </p>
-
-  <p>
+  <p class="center" >
     <strong>Address:</strong>
     <%= restaurant.address %>
   </p>
-
-
-
 </div>

@@ -1,11 +1,16 @@
 <h1> <%=@restaurant.name%></h1>
 
+<% @review = Review.new %>
+
 <p style="color: green"><%= notice %></p>
+
+<%= render "reviews/new" %>
 
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.comment %></li>
+    <li class="list-group-item"><%= review.content %></li>
+    <li class="list-group-item">⭐x<%= review.rating %></li>
       <%= link_to "Delete",
         review_path(review),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
@@ -14,8 +19,8 @@
 </ul>
 <br>
 
+
 <div>
-  <%= link_to "See chef's profile", chef_restaurant_path(@restaurant)  %>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
   <%= link_to "Back to restaurants", restaurants_path %>
 
